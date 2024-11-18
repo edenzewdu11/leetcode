@@ -1,9 +1,8 @@
 class Solution(object):
-    def containsDuplicate(self, nums):
-        nums_set= set()
-        for num in nums:
-            if num in nums_set:
+    def containsDuplicate(self, arr):
+        m= {}
+        for value in arr:
+            if value in m:
                 return True
-            nums_set.add(num)
+            m[value] = 1
         return False
-
